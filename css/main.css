@@ -156,8 +156,8 @@ h1{
   .block-ads{
     border: 1px solid grey;
     height: 243px;
-    margin-top: 50px;
     width: 500px;
+    margin: 50px 0px 0px 41px;
   }
   .block-ads__paragraph{
     margin: 14px 0px 0px 0px;
@@ -200,6 +200,9 @@ h1{
   }
   .block-ads-button_first{
     margin-top: 129px;
+  }
+  .block-ads-button_second{
+    width: 139px;
   }
   .profile-heading{
     margin-top: 105px;
