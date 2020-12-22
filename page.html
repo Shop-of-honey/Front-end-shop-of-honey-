@@ -31,9 +31,6 @@
                                 <a class="menu__link" href="card.html">Заказы</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Сделки</a>
-                            </li>
-                            <li class="menu__item">
                                 <a class="menu__link" id="login" href="registration.html">Вход/Регистрация</a>
                             </li>
                             <li hidden id="logout" class="menu__item">
@@ -76,42 +73,84 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-6 text-center">
+                    <p class="advertisement-title">
+                        Id:
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <p class="advertisement-title">
+                        {{record.id}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <p class="advertisement-title">
+                        Имя пользователя:
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
                     <p class="advertisement-title">
                         {{record.creator.username}}
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-6 text-center">
+                    <p class="advertisement-title">
+                        E-mail пользователя:
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
                     <p class="advertisement-title">
                         {{record.creator.email}}
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-6 text-center">
+                    <p class="advertisement-title">
+                        Телефон пользователя
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
                     <p class="advertisement-title">
                         {{record.creator.phone}}
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-6 text-center">
+                    <p class="advertisement-title">
+                        Наименование:
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
                     <p class="advertisement-title">
                         {{record.name}}
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center ">
+                <div class="col-lg-6 text-center">
+                    <p class="advertisement-title">
+                        Описание:
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center ">
                     <p class="advertisement-title">
                         {{record.description}}
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-6 text-center">
+                    <p class="advertisement-title">
+                        Цена:
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
                     <p class="advertisement-title">
                         {{record.price}}
                     </p>
@@ -125,6 +164,10 @@
             </div>
         </div>
     </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
     <div id="disqus_thread"></div>
     <script>
         /**
@@ -145,6 +188,10 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
             powered by Disqus.</a></noscript>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer id="footer">
         <div class="footer-wrapper-first">
             <div class="container">
@@ -159,9 +206,6 @@
                             </li>
                             <li class="menu__item footer-menu__point">
                                 <img class="footer-menu__link footer-logo" src="img/logo.png" alt="">
-                            </li>
-                            <li class=" menu__item footer-menu__point">
-                                <a class="menu__link footer-menu__link" href="registration.html">Вход/Регистрация</a>
                             </li>
                             <li class=" menu__item footer-menu__point">
                                 <a class="menu__link footer-menu__link" href="Contacts.html">Контакты</a>
