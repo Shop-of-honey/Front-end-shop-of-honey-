@@ -195,8 +195,14 @@ h1{
     text-align: center;
     border-radius: 6% 6% 6% 6%;
   }
+  .block-ads_card{
+    width: 100%;
+  }
   .block-ads-button_first{
     margin-top: 129px;
+  }
+  .profile-heading{
+    margin-top: 105px;
   }
   .vertical-line{
     display: block;
