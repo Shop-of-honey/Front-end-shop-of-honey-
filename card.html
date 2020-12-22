@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section id="header">
+        <header class="header d-block d-lg-none">
+            <div class="nav-container">
+                <div class="nav-wrapper">
+                    <div id="menu-togle" class="menu-icon">
+                        <div class="menu-icon-line"></div>
+                    </div>
+                    <div id="mobile-nav" class="mobile-nav">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <a href="index.html"><img class="logo " src="img/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <ul class="mobile-nav__list">
+                                    <li class="mobile-nav__item"><a class="mobile-nav__link menu__link"
+                                            href="#">Поиск</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="horizontal-line horizontal-line_mobile"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="menu-wrapper menu-wrapper_mobile">
+                                    <span class="menu-wrapper__span"><img src="img/icons/arrow_1 2.svg " alt=""></span>
+                                    <a href="#" class="paragraph-metall paragraph-metall_mobile-first">
+                                        Калькулятор металла
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="menu-wrapper menu-wrapper_mobile">
+                                    <span class="menu-wrapper__span"><img src="../Third/img/icons/logistic 1.svg"
+                                            alt=""></span>
+                                    <a href="#" class="paragraph-metall paragraph-metall_mobile">
+                                        Калькулятор логистики
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="horizontal-line horizontal-line_mobile-second"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="menu-wrapper menu-wrapper-second menu-wrapper-second_mobile">
+                                    <img сlass="icon-man" src="../Third/img/icons/user 2.svg" />
+                                    <div class="star-wrapper">
+                                        <p class="paragraph-provider">
+                                            Поставщик ООО"Северсталь"
+                                        </p>
+                                        <div class="block block_first star">
+                                            <img class="star__item" src="../Third/img/icons/Star 2.svg" />
+                                            <img class="star__item" src="../Third/img/icons/Star 2.svg" />
+                                            <img class="star__item" src="../Third/img/icons/Star 2.svg" />
+                                            <img class="star__item" src="../Third/img/icons/Star 2.svg" />
+                                            <img class="star__item" src="../Third/img/icons/Star 2.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="horizontal-line horizontal-line_mobile-third"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <ul class="mobile-nav__list mobile-nav__list_second">
+                                    <li class="mobile-nav__item"><a class="mobile-nav__link menu__link" href="#">Мой
+                                            профиль</a></li>
+                                    <li class="mobile-nav__item"><a href="#" class="mobile-nav__link menu__link">Мои
+                                            обьявления</a></li>
+                                    <li class="mobile-nav__item"><a href="#"
+                                            class="mobile-nav__link menu__link">Продлить подписку</a></li>
+                                    <li class="mobile-nav__item"><a href="#"
+                                            class="mobile-nav__link menu__link">Сообщения</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="horizontal-line horizontal-line_mobile-third"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <ul class="mobile-nav__list mobile-nav__list_exit">
+                                    <li class="mobile-nav__item"><a class="mobile-nav__link menu__link"
+                                            href="#">выход</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-1 col-sm-1 col-1">
+                    <a href="index.html"><img class="logo " src="img/logo.png" alt=""></a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 d-none d-lg-block ">
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a class="menu__link" href="index.html">Поиск</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Заказы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="Contacts.html">Контакты</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" id="login" href="registration.html">Вход/Регистрация</a>
+                            </li>
+                            <li hidden id="logout" class="menu__item">
+                                <a class="menu__link" href="registration.html">Выход</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-2 d-none d-lg-block">
+                    <div class="menu-wrapper">
+                        <span class="menu-wrapper__span"><img src="../Third/img/icons/logistic 1.svg" alt="">
+                            <a href="page2.html" id="addRecord" class="paragraph-metall">
+                                Подать обьявление
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div  class="col-lg-3 col-md-2 d-none d-lg-block">
+                    <div hidden id="profile" class="personal-area">
+                        <span class="icon-man-span"><img сlass="icon-man" src="img/icons/user 2.svg" /></span>
+                        <span class="menu-wrapper__span">
+                            <a href="profile.html" class="paragraph-metall paragraph-metall_two">
+                                Личный кабинет
+                            </a>
+                        </span>
+
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="list-card">
+        <p v-if="loading">Загрузка...</p>
+        <p v-else-if="!records.length">Записей пока нет</p>
+        <div v-else class="container">
+            <div class="row">
+                <div v-for="record of records" :key="record.id" class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="block-ads" id="ads">
+                        <div class="row">
+                            <div class="col-lg-3 offset-lg-1 col-md-3 offset-md-1 col-sm-3 offset-sm-1 col-3 offset-1">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <p class="block-ads__paragraph">
+                                            Наименование
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h3 class="block-ads__heading">
+                                            {{record.name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <p class="block-ads__paragraph">
+                                            Город
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h3 class="block-ads__heading">
+                                            {{record.location}}
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <p class="block-ads__paragraph">
+                                            Производитель
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h3 class="block-ads__heading">
+                                            ###
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <p class="block-ads__paragraph">
+                                            Рейтинг производителя
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h3 class="block-ads__heading">
+                                            <div class="block block_second">
+                                                <img class="star-item-second" src="../Third/img/icons/Star 5.svg" />
+                                                <img class="star-item star-item-second"
+                                                    src="../Third/img/icons/Star 5.svg" />
+                                                <img class="star-item star-item-second"
+                                                    src="../Third/img/icons/Star 5.svg" />
+                                                <img class="star-item star-item-second"
+                                                    src="../Third/img/icons/Star 5.svg" />
+                                                <img class="star-item star-item-second"
+                                                    src="../Third/img/icons/Star 5.svg" />
+                                            </div>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <p class="block-ads__paragraph">
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center col-md-4 col-sm-4 col-4">
+
+                                <div class="row">
+                                    <div class="col-lg-12 text-center col-md-12 col-sm-12 col-12">
+                                        <span id="block-ads__star"><i
+                                                class=" block-ads__paragraph_star far fa-star fa-1x"></i></span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <p class="block-ads__paragraph-second" id="block-ads__paragraph-second">
+                                            Цена
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-center col-md-12 col-sm-12 col-12">
+                                        <h3 class="block-ads__heading block-ads__heading_margin"
+                                            id="block-ads__heading_margin">
+                                            {{record.price}}
+                                        </h3>
+                                        <div class="vertical-line" id="vertical-line"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 text-center col-md-6 col-sm-6 col-6">
+                                        <div class="block-ads-button" id="block-ads-button">
+                                            <a :href="`page.html?record=${record.id}`" class="block-ads-button__link">
+                                                <p class=" block-ads__heading block-ads-button__paragraph">Смотреть</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 text-center col-md-6 col-sm-6 col-6">
+                                        <div @click.prevent="removeHandler(record.id)" class="block-ads-button"
+                                            id="block-ads-button">
+                                            <a href="#">
+                                                <p class=" block-ads__heading block-ads-button__paragraph"></p>Удалить
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-wrapper-first">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <ul class="footer-menu">
+                            <li class="menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="index.html">Поиск</a>
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="card.html">Заказы</a>
+                            </li>
+                            <li class="menu__item footer-menu__point">
+                                <img class="footer-menu__link footer-logo" src="img/logo.png" alt="">
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="registration.html">Вход/Регистрация</a>
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="Contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center col-md-12">
+                        <div class="icons">
+                            <a href="#"><img class="instagram" src="img/icons/logo_instagram.svg"></a>
+                            <a href="#"><img class="vk" src="img/icons/logo_vk.svg" /></a>
+                            <a href="#"><img class="youtube" src="img/icons/logo_youtube 1.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrapper-second">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center col-md-12 col-sm-12">
+                        <p class="footer-wrapper-third footer-wrapper-third_first">© 2020 Все права защищены</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/83e979f233.js" crossorigin="anonymous"></script>
+    <!-- vueJs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+        let app = new Vue({
+            el: "#list-card",
+            data: {
+                records: [],
+                loading: true
+            },
+            methods: {
+                getRecords: function () {
+                    const items = JSON.parse(localStorage.getItem('items')) || [];
+                    if (items.length) {
+                        this.records = items;
+                    }
+
+                    this.loading = false
+                },
+                removeHandler: function (recordId) {
+                    const records = this.records.filter(r => r.id !== +recordId);
+
+                    this.records = records;
+
+                    localStorage.setItem('items', JSON.stringify(records))
+                }
+            },
+            mounted: function () {
+                this.getRecords()
+            }
+        });
+        window.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token') || null
+            if (token) {
+                fetch("http://beegardenbackend.herokuapp.com/is_authenticated/", {
+                    headers: {
+                        Authorization: `Token ${token}`,
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                }).then(res => {
+                    if (res.status !== 200) {
+                        addRecord.hidden = true
+                    }
+                    login.hidden = true
+                    logout.hidden = false
+                    profile.hidden = false
+                }).catch(error => {
+                    addRecord.hidden = true
+                })
+            } else {
+                addRecord.hidden = true
+            }
+        });
+
+        logout.onclick = function () {
+            localStorage.removeItem('token')
+            window.location.href = 'index.html'
+            return false
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+</body>
+
+</html>

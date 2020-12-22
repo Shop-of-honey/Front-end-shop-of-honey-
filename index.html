@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-1 col-sm-1 col-1">
+                    <a href="index.html"><img class="logo logo_mobile" src="img/logo.png" alt="" /></a>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-4 d-none d-lg-block ">
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Поиск</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="card.html">Заказы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="Contacts.html">Контакты</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" id="login" href="registration.html">Вход/Регистрация</a>
+                            </li>
+                            <li hidden id="logout" class="menu__item">
+                                <a class="menu__link" href="registration.html">Выход</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 d-none d-lg-block">
+                    <div class="menu-wrapper">
+                        <span class="menu-wrapper__span">
+                            <a id="addRecord" href="page2.html" class="paragraph-metall">
+                                Подать обьявление
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2 d-none d-lg-block">
+                    <div hidden id="profile" class="personal-area">
+                        <span class="icon-man-span"><img сlass="icon-man" src="img/icons/user 2.svg" /></span>
+                        <span class="menu-wrapper__span">
+                            <a href="profile.html" class="paragraph-metall paragraph-metall_two">
+                                Личный кабинет
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="second">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h2 class="title">
+                        Поиск товаров
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-md-12 col-sm-12 col-12">
+                    <div class="search">
+                        <form>
+                            <input type="text" placeholder="Начните вводить наименование товара , который хотите найти">
+                            <button type="submit"><img src="img/icons/lupa 1.svg" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-block d-lg-none">
+                        <div id="open-window"></div>
+                        <div id="win_modal" class="modal">
+                            <div class="outer">
+                                <div class="middle">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <span class="close">&times;</span>
+                                            <div id="bg_modal"></div>
+                                            <div class="row">
+                                                <div class="col-12 text-center">
+                                                    <select id="drop-modal">
+                                                        <option>Категории</option>
+                                                        <option>Сыроежкин</option>
+                                                        <option>Чижиков</option>
+                                                        <option>Кукушкина</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <form action="#" class="form-parameters">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="check1"
+                                                            class="form-parameters__label">Размер</label>
+                                                        <div class="form-parametrs__block">
+                                                            <input placeholder="Минимальный" type="input" id="check1"
+                                                                class="input-modal input-modal_first form-parametrs__input form-parametrs__input_first">
+                                                            <div class="form-parametrs__line">-</div>
+                                                            <input placeholder="Максимальный" type="input" id="check2"
+                                                                class="input-modal form-parametrs__input form-parametrs__input_second">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="check3" class="form-parameters__label">Марка</label>
+                                                        <input placeholder="Начните вводить марку" type="input"
+                                                            id="check3"
+                                                            class="form-input-modal form-parametrs__input form-parametrs__input_third">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="check1" class="form-parameters__label">Цена</label>
+                                                        <div class="form-parametrs__block">
+                                                            <input placeholder="Минимальный" type="input" id="check1"
+                                                                class="input-modal form-parametrs__input form-parametrs__input_first">
+                                                            <div class="form-parametrs__line">-</div>
+                                                            <input placeholder="Максимальный" type="input" id="check2"
+                                                                class="input-modal form-parametrs__input form-parametrs__input_second">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="check1"
+                                                            class="form-parameters__label">Остаток</label>
+                                                        <div class="form-parametrs__block">
+                                                            <input placeholder="Минимальный" type="input" id="check1"
+                                                                class="input-modal form-parametrs__input form-parametrs__input_first">
+                                                            <div class="form-parametrs__line">-</div>
+                                                            <input placeholder="Максимальный" type="input" id="check2"
+                                                                class="input-modal form-parametrs__input form-parametrs__input_second">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="check3" class="form-parameters__label">Город</label>
+                                                        <input placeholder="Начните вводить Город" type="input"
+                                                            id="check3"
+                                                            class="form-input-modal form-parametrs__input form-parametrs__input_third">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="check3"
+                                                            class="form-parameters__label">Поставщик</label>
+                                                        <input placeholder="Начните вводить имя поставщика" type="input"
+                                                            id="check3"
+                                                            class="form-input-modal form-parametrs__input form-parametrs__input_third">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 text-center">
+                                                        <button type="button" class="button"
+                                                            id="button">Применить</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center d-block d-lg-none">
+                        <p class="paragraph-modal">
+                            Параметры поиска
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="third">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="section-title">Параметры поиска</h2>
+                        </div>
+                    </div>
+
+                    <form action="#" class="form-parameters">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <select id="drop-down">
+                                    <option>Категории</option>
+                                    <option>Мед</option>
+                                    <option>Улья</option>
+                                    <option>Матки</option>
+                                    <option>Рамки</option>
+                                    <option>Вощина</option>
+                                    <option>Инструменты</option>
+                                    <option>Дымари</option>
+                                    <option>Медогонки</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="check3" class="form-parameters__label">Наименование</label>
+                                <input placeholder="Начните вводить наименование" type="input" id="check3"
+                                    class="form-parametrs__input form-parametrs__input_third">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="check3" class="form-parameters__label">Производитель</label>
+                                <input placeholder="Начните вводить производителя" type="input" id="check3"
+                                    class="form-parametrs__input form-parametrs__input_third">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="check3" class="form-parameters__label">Город</label>
+                                <input placeholder="Начните вводить город" type="input" id="check3"
+                                    class="form-parametrs__input form-parametrs__input_third">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="check1" class="form-parameters__label">Цена</label>
+                                <div class="form-parametrs__block">
+                                    <input placeholder="Минимальный" type="input" id="check1"
+                                        class="form-parametrs__input form-parametrs__input_first">
+                                    <div class="form-parametrs__line">-</div>
+                                    <input placeholder="Максимальный" type="input" id="check2"
+                                        class="form-parametrs__input form-parametrs__input_second">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button type="button" class="button" id="button">Применить</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="col-lg-6" id='app'>
+                    <p v-if="loading">Загрузка...</p>
+                    <p v-else-if="!records.length">Записей пока что нет</p>
+                    <template v-else>
+                        <div class="row">
+                            <div class="col-lg-12 d-none d-lg-block">
+                                <select id="drop-down-second">
+                                    <option> .Сперва с самым высоким рейтингом</option>
+                                    <option>Сыроежкин</option>
+                                    <option>Чижиков</option>
+                                    <option>Кукушкина</option>
+                                </select>
+                            </div>
+                            <!-- start item -->
+                            <div class="row" v-for="record of records" :key="record.id">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="block-ads" id="adsTen">
+                                        <div class="row">
+                                            <div
+                                                class="col-lg-3 offset-lg-1 col-md-3 offset-md-1 col-sm-3 offset-sm-1 col-3 offset-1">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            Наименование
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading">
+                                                            {{record.name}}
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            Описание
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading">
+                                                            {{record.description}}
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            Размер
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading">
+                                                            8
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            Марка
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading">
+                                                            А400
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            Остаток
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading">
+                                                            100 тонн
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            Город
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading">
+                                                            {{record.location}}
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            Поставщик
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading">
+                                                            ООО "Северсталь"
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            Рейтинг поставщика
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading">
+                                                            <div class="block block_second">
+                                                                <img class="star-item-second"
+                                                                    src="../Third/img/icons/Star 5.svg" />
+                                                                <img class="star-item star-item-second"
+                                                                    src="../Third/img/icons/Star 5.svg" />
+                                                                <img class="star-item star-item-second"
+                                                                    src="../Third/img/icons/Star 5.svg" />
+                                                                <img class="star-item star-item-second"
+                                                                    src="../Third/img/icons/Star 5.svg" />
+                                                                <img class="star-item star-item-second"
+                                                                    src="../Third/img/icons/Star 5.svg" />
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph">
+                                                            <br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading block-ads__heading_date">
+                                                            Размещено: 10.08.2020 обновлено: 01.09.2020
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 text-center col-md-4 col-sm-4 col-4">
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-center col-md-12 col-sm-12 col-12">
+                                                        <span id="block-ads__star-ten"><i
+                                                                class=" block-ads__paragraph_star far fa-star fa-1x"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <p class="block-ads__paragraph-second"
+                                                            id="block-ads__paragraph-second_ten">
+                                                            Цена
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-center col-md-12 col-sm-12 col-12">
+                                                        <h3 class="block-ads__heading block-ads__heading_margin"
+                                                            id="block-ads__heading_margin_ten">
+                                                            {{record.price}}
+                                                        </h3>
+                                                        <div class="vertical-line" id="vertical-line-ten"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-center col-md-12 col-sm-12 col-12">
+                                                        <div class="block-ads-button" id="block-ads-button-ten">
+                                                            <a :href="`page.html?record=${record.id}`"
+                                                                class="block-ads-button__link">
+                                                                <p
+                                                                    class=" block-ads__heading block-ads-button__paragraph">
+                                                                    Смотреть</p>
+                                                            </a>
+                                                        </div>
+                                                        <div @click.prevent="addToBacket(record.id)"
+                                                            class="block-ads-button" id="block-ads-button-ten">
+                                                            <a href="#" class="block-ads-button__link">
+                                                                <p
+                                                                    class=" block-ads__heading block-ads-button__paragraph">
+                                                                    купить</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- start item s-->
+                    </template>
+
+
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <img src="../Third/img/icons/banner-right_1 1.svg" alt="" class="city">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 text-center col-md-8 col-8">
+                    <div class="pages">
+                        <a href="#" class="pages__link">
+                            1
+                        </a>
+                        <a href="#" class="pages__link">
+                            2
+                        </a>
+                        <a href="#" class="pages__link">
+                            3
+                        </a>
+                        <a href="#" class="pages__link">
+                            ...
+                        </a>
+                        <a href="#" class="pages__link">
+                            12
+                        </a>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-4">
+                    <div class="pages-information">
+                        <p class="pages-information__paragraph">Показывать по:</p>
+                        <select id="pages-information__number">
+                            <option>10</option>
+                            <option>9</option>
+                            <option>8</option>
+                            <option>7</option>
+                            <option>6</option>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-wrapper-first">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <ul class="footer-menu">
+                            <li class="menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="index">Поиск</a>
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="card.html">Заказы</a>
+                            </li>
+                            <li class="menu__item footer-menu__point">
+                                <img class="footer-menu__link footer-logo" src="img/logo.png" alt="">
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="registration.html">Вход/Регистрация</a>
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="Contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center col-md-12">
+                        <div class="icons">
+                            <a href="#"><img class="instagram" src="img/icons/logo_instagram.svg"></a>
+                            <a href="#"><img class="vk" src="img/icons/logo_vk.svg" /></a>
+                            <a href="#"><img class="youtube" src="img/icons/logo_youtube 1.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrapper-second">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center col-md-12 col-sm-12">
+                        <p class="footer-wrapper-third footer-wrapper-third_first">© 2020 Все права защищены</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- vueJs -->
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/83e979f233.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="application/javascript">
+        new Vue({
+            el: "#app",
+            data: {
+                loading: true,
+                records: []
+            },
+            methods: {
+                getRecords: async function () {
+                    let records = await fetch("http://beegardenbackend.herokuapp.com/products");
+                    records = await records.json() // получаю записи
+
+                    this.records = records.reverse()
+                    this.loading = false
+                },
+                addToBacket: function (recordId) {
+                    const items = JSON.parse(localStorage.getItem('items')) || []
+
+                    const item = this.records.find(r => r.id === +recordId);
+                    if (!items.length) {
+                        const items = []
+                        items.push(item)
+                        localStorage.setItem('items', JSON.stringify(items));
+                    } else {
+                        let hasItem = items.some(item => item.id === + recordId);
+                        if (hasItem) {
+                            alert('Данная запись уже добавлена в корзину');
+                            return
+                        }
+                        items.push(item);
+                        localStorage.setItem('items', JSON.stringify(items));
+                    }
+                }
+            },
+            mounted: function () {
+                this.getRecords()
+
+            }
+        });
+        window.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token') || null
+            if (token) {
+                fetch("http://beegardenbackend.herokuapp.com/is_authenticated/", {
+                    headers: {
+                        Authorization: `Token ${token}`,
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                }).then(res => {
+                    if (res.status !== 200) {
+                        addRecord.hidden = true
+                    }
+                    login.hidden = true
+                    logout.hidden = false
+                    profile.hidden = false
+                }).catch(error => {
+                    addRecord.hidden = true
+                })
+            } else {
+                addRecord.hidden = true
+            }
+        });
+        
+        logout.onclick = function(){
+            localStorage.removeItem('token')
+            window.location.href='index.html'
+            return false
+        }
+        
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

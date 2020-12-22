@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script id="dsq-count-scr" src="//university-4.disqus.com/count.js" async></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-1 col-sm-1 col-1">
+                    <a href="index.html"><img class="logo " src="img/logo.png" alt=""></a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 d-none d-lg-block ">
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a class="menu__link" href="index.html">Поиск</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="card.html">Заказы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Сделки</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" id="login" href="registration.html">Вход/Регистрация</a>
+                            </li>
+                            <li hidden id="logout" class="menu__item">
+                                <a class="menu__link" href="registration.html">Выход</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-2 d-none d-lg-block">
+                    <div class="menu-wrapper">
+                        <span class="menu-wrapper__span"><img src="../Third/img/icons/logistic 1.svg" alt="">
+                            <a href="page2.html" id="addRecord" class="paragraph-metall">
+                                Подать обьявление
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2 d-none d-lg-block">
+                    <div hidden id='profile' class="personal-area">
+                        <span class="icon-man-span"><img сlass="icon-man" src="img/icons/user 2.svg" /></span>
+                        <span class="menu-wrapper__span">
+                            <a href="profile.html" class="paragraph-metall paragraph-metall_two">
+                                Личный кабинет
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="advertisement">
+        <p v-if="loading">Загрузка...</p>
+        <p v-else-if="record.length">Записи не существует</p>
+        <div v-else class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="advertisement-title">
+                        Смотреть товар
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="advertisement-title">
+                        {{record.creator.username}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="advertisement-title">
+                        {{record.creator.email}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="advertisement-title">
+                        {{record.creator.phone}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="advertisement-title">
+                        {{record.name}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center ">
+                    <p class="advertisement-title">
+                        {{record.description}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="advertisement-title">
+                        {{record.price}}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="advertisement-title">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://university-4.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+            powered by Disqus.</a></noscript>
+    <footer id="footer">
+        <div class="footer-wrapper-first">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <ul class="footer-menu">
+                            <li class="menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="index.html">Поиск</a>
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="card.html">Заказы</a>
+                            </li>
+                            <li class="menu__item footer-menu__point">
+                                <img class="footer-menu__link footer-logo" src="img/logo.png" alt="">
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="registration.html">Вход/Регистрация</a>
+                            </li>
+                            <li class=" menu__item footer-menu__point">
+                                <a class="menu__link footer-menu__link" href="Contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center col-md-12">
+                        <div class="icons">
+                            <a href="#"><img class="instagram" src="img/icons/logo_instagram.svg"></a>
+                            <a href="#"><img class="vk" src="img/icons/logo_vk.svg" /></a>
+                            <a href="#"><img class="youtube" src="img/icons/logo_youtube 1.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrapper-second">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center col-md-12 col-sm-12">
+                        <p class="footer-wrapper-third footer-wrapper-third_first">© 2020 Все права защищены</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/83e979f233.js" crossorigin="anonymous"></script>
+
+    <!-- vueJs -->
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script type="application/javascript">
+
+        function getQueryParam(item) {
+            var svalue = window.location.search.match(new RegExp('[\?\&]' + item + '=([^\&]*)(\&?)', 'i'));
+            return svalue ? svalue[1] : svalue;
+        }
+
+        let app = new Vue({
+            el: "#advertisement",
+            data: {
+                loading: true,
+                record: []
+            },
+            methods: {
+                getRecord: async function () {
+                    let recordId = getQueryParam('record');
+                    let record = await fetch(`http://beegardenbackend.herokuapp.com/products/${recordId}`);
+
+                    record = await record.json()
+
+                    if (!record.detail) {
+                        this.record = record
+
+                    }
+
+                    this.loading = false
+                }
+            },
+            mounted: function () {
+                this.getRecord()
+            }
+        });
+        window.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('token') || null
+            if (token) {
+                fetch("http://beegardenbackend.herokuapp.com/is_authenticated/", {
+                    headers: {
+                        Authorization: `Token ${token}`,
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                }).then(res => {
+                    if (res.status !== 200) {
+                        addRecord.hidden = true
+                    }
+                    login.hidden = true
+                    logout.hidden = false
+                    profile.hidden = false
+                }).catch(error => {
+                    addRecord.hidden = true
+                })
+            } else {
+                addRecord.hidden = true
+            }
+        });
+        
+        logout.onclick = function(){
+            localStorage.removeItem('token')
+            window.location.href='index.html'
+            return false
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>
